@@ -30,7 +30,7 @@ public class LoginPage {
     @FindBy(xpath = "//i[@class='fa fa-user']")
     WebElement logoutimage;
 
-    @FindBy(xpath = "//a[contains(text(),'Logout')]")
+    @FindBy(xpath = "//ul[@class='us_pr_lt']//a[contains(text(),'Logout')]")
     WebElement logoutclick;
 
 
@@ -42,7 +42,11 @@ public class LoginPage {
         loginButton.click();
     }
 
-
+    public void logout()
+    {
+        logoutimage.click();
+        logoutclick.click();
+    }
 
 
 
